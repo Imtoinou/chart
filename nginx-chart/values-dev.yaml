@@ -1,16 +1,10 @@
 image:
-  tag: "1.18"
-
-service:
-  type: ClusterIP
-  port: 80
+  tag: "1.23"
 
 ingress:
-  enabled: false
-  annotations: {}
-    nginx.ingress.kubernetes.io/rewrite-target: /
+  enabled: true
   hosts:
-    - host: "srv-dev.test"
+    - host: srv-dev.test
       paths:
         - path: /
           pathType: Prefix
