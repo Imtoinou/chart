@@ -1,3 +1,13 @@
+configmap:
+  name: configmap-dev
+  path: /usr/share/nginx/html
+  volume: nginx-index-file
+  file: index.html
+  data:
+    <html>
+    <h1>Dev Server</h1>
+    </html>
+    
 image:
   tag: "1.23"
 
@@ -8,3 +18,5 @@ ingress:
       paths:
         - path: /
           pathType: Prefix
+
+
